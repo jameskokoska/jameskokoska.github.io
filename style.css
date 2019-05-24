@@ -33,7 +33,7 @@ html, body {
 }
 @media only screen and (orientation:landscape){
   #rotateMessage{
-    visibility:none;
+    display:none;
   }
   #topBar{
     visibility:none;
