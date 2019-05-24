@@ -443,12 +443,16 @@ input[type='checkbox']{
   height: 17vw;
   margin-left: 8vw;
   box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
+  transition: background 0.5s;
 }
 
+.experienceBox:hover{
+  background: rgb(24, 69, 136);
+}
 
 .experienceBoxText{
   background: #ffffff;
-  color: rgb(0, 0, 0);
+  color: #000000;
   top: 22vw;
   border-bottom-left-radius: 1vw;
   border-bottom-right-radius: 1vw;
@@ -461,10 +465,12 @@ input[type='checkbox']{
   text-align: center;
   box-shadow: 0 0.2vw 0.5vw 0 #00000066;
   margin-bottom: 5vw;
-
+  transition: color 0.5s;
 }
 
-
+.experienceBoxText:hover{
+  color: #00000070;
+}
 
 .end{
   background: #292B37;
