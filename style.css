@@ -20,20 +20,12 @@ html, body {
 #rotateMessage{
   display:none;
 }
-#topBar{
-  visibility: hidden;
-}
 @media all and (orientation:portrait){
   #page{
       display:none;
     }
   #rotateMessage{
     display:block;
-  }
-}
-@media only screen and (orientation:landscape){
-  #topBar{
-    visibility: hidden;
   }
 }
 
