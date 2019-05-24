@@ -35,9 +35,7 @@ html, body {
   #rotateMessage{
     visibility:none;
   }
-}
-@media only screen{
-   #topBar{
+  #topBar{
     visibility:none;
   }
 }
