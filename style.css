@@ -8,24 +8,28 @@
   src: url("assets/fonts/Product Sans Regular.ttf")  format("truetype");
 }
 
-/*html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}*/
-
 html, body {
   scroll-behavior: smooth; 
   margin: 0px;
   padding: 0px;
 } 
 
-@media all and (orientation:portrait) {
-    #info {
-         display: block;
-         color: red;
-         content:"";
-    }
+#bodyContainer {
+  display:block;
 }
+@media only screen and (orientation:portrait){
+  #bodyContainer{
+    height:100vw;
+    transform: rotate(90deg);
+  }
+}
+@media only screen and (orientation:landscape){
+  #bodyContainer{
+    transform: rotate(0);
+  }
+}
+
+
 
 p {
   font-family: 'ProductSansRegular';
