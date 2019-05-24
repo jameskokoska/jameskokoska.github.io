@@ -31,7 +31,7 @@ html, body {
     display:block;
   }
 }
-@media all and (orientation:landscape){
+@media only screen and (orientation:landscape){
   #topBar{
     visibility:none;
   }
