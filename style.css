@@ -44,14 +44,11 @@ html, body {
 
 rotateMessage{
   font-family: 'ProductSansBold';
-  overflow: hidden;
   margin: 0 auto;
   white-space: nowrap;
   padding-left: 8.6vw;
   padding-top: 9.5vw;
   font-size: 7vw;
-  animation: revealIn 1s forwards;
-  opacity:0;
 }
 
 p {
