@@ -23,7 +23,7 @@ html, body {
 #topBar{
   visibility: visible;
 }
-@media only screen and (orientation:portrait){
+@media all and (orientation:portrait){
   #page{
       display:none;
     }
@@ -31,10 +31,7 @@ html, body {
     display:block;
   }
 }
-@media only screen and (orientation:landscape){
-  #rotateMessage{
-    display:none;
-  }
+@media all and (orientation:landscape){
   #topBar{
     visibility:none;
   }
