@@ -14,18 +14,18 @@ html, body {
   padding: 0px;
 } 
 
-#bodyContainer {
-  display:block;
-}
+
 @media only screen and (orientation:portrait){
-  #bodyContainer{
-    height:100vw;
-    transform: rotate(90deg);
+  #page{
+      display:none;
+    }
+  #rotateMessage{
+    display:block;
   }
 }
 @media only screen and (orientation:landscape){
-  #bodyContainer{
-    transform: rotate(0);
+  #rotateMesssage{
+    display:none;
   }
 }
 
