@@ -106,7 +106,7 @@ a{
 
 .button{
   font-family: 'ProductSansRegular';
-  background-color: #3651EF;
+  background-color: #3651ef;
   background-image: linear-gradient(to right, #36D1DC,#5B86E5, #6015a5, #6015a5);
   background-size:225%;
   text-align: center;
@@ -283,6 +283,7 @@ a{
 
 .timeline{
   background: #4150A8;
+  padding-bottom: 6vw;
 }
 
 .timelineTitle{
@@ -304,20 +305,18 @@ input[type='checkbox']{
 .timelineContentTitleCollapse{
   cursor: pointer;
   background:white;
-  border-top-left-radius: 1vw;
-  border-top-right-radius: 1vw;
-  padding: 0.5vw 2.5vw;
+  border-radius: 1vw;
+  padding: 1.5vw 2.5vw;
   width: 70vw;
   left: 6vw;
   transition: all 0.5s;
   display: block;
   position: relative;
   font-family: 'ProductSansBold';
-  padding-top: 1.5vw;
   font-size: 2vw;
   color: black;
-  z-index: 2;
   transition: color 0.3s;
+  transition: border-bottom-left-radius 0.5s, border-bottom-right-radius 0.5s, color 0.5s;
 }
 .timelineContentTitleCollapse:hover{
   color: #000000a4;
@@ -340,20 +339,24 @@ input[type='checkbox']{
 .timelineCollapsableContent{
   background:white;
   position: relative;
-  border-bottom-left-radius: 1vw;
-  border-bottom-right-radius: 1vw;
-  padding: 0.5vw 2.5vw;
+  border-radius: 1vw;
+  padding: 0vw 2.5vw;
   width: 70vw;
   left: 6vw;
   box-shadow: 0 0.2vw 0.5vw 0 #00000066;
-  z-index: 1;
 
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 0.5s, border-top-left-radius 0.5s, border-top-right-radius 0.5s;
 }
 .toggle:checked + .timelineContentTitleCollapse + .timelineCollapsableContent{
   max-height: 250px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.toggle:checked + .timelineContentTitleCollapse{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .timelineDot:before{
@@ -392,7 +395,6 @@ input[type='checkbox']{
   filter: drop-shadow(0vw 0.3vw 0.6vw #00000048);
 }
 
-
 .timelineContentLine{
   width: 0.8vw;
   height:100%;
@@ -404,6 +406,66 @@ input[type='checkbox']{
   content:"";
   padding-bottom: 3vw;
 }
+
+.timelineBottom{
+  background-image: url("assets/waveBottom.png");
+  background-repeat: repeat-x;
+  width: 1728px;
+  height: 13vw;
+  animation: waveMove 12s infinite linear;
+  overflow: hidden;
+  position: relative;
+}
+
+.timelineBottomHide{
+  overflow: hidden;
+  position: relative;
+}
+
+.experienceTitle{
+  font-family: 'ProductSansBold';
+  padding-left: 5vw;
+  margin-top: -9vw;
+  padding-top: 70px;
+  font-size: 5vw;
+  color: rgb(0, 0, 0);
+  position: relative;
+  margin-bottom: 3vw;
+
+}
+
+.experienceBox{
+  background: #276ED9;
+  position: relative;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  content:"";
+  width: 22vw;
+  height: 17vw;
+  margin-left: 8vw;
+  box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
+}
+
+
+.experienceBoxText{
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  top: 22vw;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  width: 22vw;
+  margin-left: 8vw;
+  font-family: 'ProductSansBold';
+  padding-top: 0.62vw;
+  padding-bottom: 0.62vw;
+  font-size: 2vw;
+  text-align: center;
+  box-shadow: 0 0.2vw 0.5vw 0 #00000066;
+  margin-bottom: 5vw;
+
+}
+
+
 
 .end{
   background: #292B37;
