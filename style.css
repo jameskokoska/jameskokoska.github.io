@@ -33,23 +33,16 @@ html, body {
 }
 @media only screen and (orientation:landscape){
   #rotateMessage{
-    display:none;
+    visibility:none;
   }
 }
 @media only screen{
-  #topBar{
+   #topBar{
     visibility:none;
   }
 }
 
-rotateMessage{
-  font-family: 'ProductSansBold';
-  margin: 0 auto;
-  white-space: nowrap;
-  padding-left: 8.6vw;
-  padding-top: 9.5vw;
-  font-size: 7vw;
-}
+
 
 p {
   font-family: 'ProductSansRegular';
