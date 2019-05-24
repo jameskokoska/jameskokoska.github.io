@@ -477,5 +477,4 @@ input[type='checkbox']{
   content: "";
   padding: calc(20px + 1.3vw);;
   box-shadow: 0 0.2vw 1.2vw 0 #0000006c;
-
 }
