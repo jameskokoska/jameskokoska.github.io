@@ -14,7 +14,15 @@ html, body {
   padding: 0px;
 } 
 
-
+#bodyContainer {
+  display:block;
+}
+#rotateMessage{
+  display:none;
+}
+#topBar{
+  visibility: visible;
+}
 @media only screen and (orientation:portrait){
   #page{
       display:none;
@@ -23,12 +31,9 @@ html, body {
     display:block;
   }
 }
-@media only screen and (orientation:landscape){
-  #rotateMesssage{
-    display:none;
-  }
+@media only screen{
   #topBar{
-    display:none;
+    visibility:none;
   }
 }
 
