@@ -21,7 +21,7 @@ html, body {
   display:none;
 }
 #topBar{
-  visibility: visible;
+  display: block;
 }
 @media all and (orientation:portrait){
   #page{
@@ -33,7 +33,7 @@ html, body {
 }
 @media only screen and (orientation:landscape){
   #topBar{
-    visibility: hidden;
+    display: none;
   }
 }
 
