@@ -1,13 +1,4 @@
 @font-face {
-  font-family: "MoonLight";
-  src: url("assets/fonts/Moon2.0-Light.ttf")  format("truetype");
-  font-weight: light;
-}
-@font-face {
-  font-family: "SanFranRegular";
-  src: url("assets/fonts/SanFranciscoDisplay-Regular.otf")  format("opentype");
-}
-@font-face {
   font-family: "ProductSansBold";
   src: url("assets/fonts/Product Sans Bold.ttf")  format("truetype");
   font-weight: bold;
@@ -27,6 +18,14 @@ html, body {
   margin: 0px;
   padding: 0px;
 } 
+
+@media all and (orientation:portrait) {
+    #info {
+         display: block;
+         color: red;
+         content:"";
+    }
+}
 
 p {
   font-family: 'ProductSansRegular';
