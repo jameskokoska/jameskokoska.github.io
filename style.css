@@ -27,6 +27,9 @@ html, body {
   #rotateMesssage{
     display:none;
   }
+  #topBar{
+    display:none;
+  }
 }
 
 
