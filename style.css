@@ -41,7 +41,7 @@ html, body {
   90%{transform: rotate(-90deg) translateY(-5vw);}
   100%{transform: rotate(0deg) translateY(0vw);;}
 }
-.rotateMessage{
+.rotateMessageMessage{
   font-family: 'ProductSansBold';
   padding: 9.5vw;
   font-size: 5.5vw;
