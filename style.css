@@ -20,6 +20,26 @@ html, body {
 #rotateMessage{
   display:none;
 }
+.rotateMessageImage{
+  width: 30%;
+  padding-top: 10vw;
+  animation: rotatePhone 4s infinite;
+}
+@keyframes rotatePhone{
+  0%{transform: rotate(0deg) translateY(0);}
+  4%{transform: rotate(0deg) translateY(0);}
+  90%{transform: rotate(-90deg) translateY(-5vw);}
+  100%{transform: rotate(0deg) translateY(0vw);;}
+}
+.rotateMessage{
+  font-family: 'ProductSansBold';
+  padding: 9.5vw;
+  font-size: 5.5vw;
+  animation: revealIn 1s forwards;
+  opacity:0;
+  text-align: center;
+}
+
 @media all and (orientation:portrait){
   #page{
       display:none;
@@ -40,9 +60,7 @@ a{
 
 .bigText{
   font-family: 'ProductSansBold';
-  overflow: hidden;
   margin: 0 auto;
-  white-space: nowrap;
   padding-left: 8.6vw;
 }
 .welcome{
