@@ -29,8 +29,6 @@ html, body {
   }
 }
 
-
-
 p {
   font-family: 'ProductSansRegular';
   font-size: calc(12px + 0.7vw);
@@ -38,7 +36,6 @@ p {
 
 a{
   text-decoration: none;
-  color: black;
 }
 
 .bigText{
@@ -203,6 +200,8 @@ a{
   float: center;
   z-index:1;
   transition: color 0.5s, filter 0.5s;
+  text-decoration: none;
+  color: black;
 }
 
 .top a:hover{
@@ -270,7 +269,7 @@ a{
   background-image: url("assets/wave.png");
   background-repeat: repeat-x;
   width: 1728px;
-  height: 13vw;
+  height: calc(25px + 5.5vw);
   animation: waveMove 12s infinite linear;
   overflow: hidden;
   position: relative;
@@ -283,14 +282,14 @@ a{
 
 .timeline{
   background: #4150A8;
-  padding-bottom: 6vw;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 10vw
 }
 
 .timelineTitle{
   font-family: 'ProductSansBold';
   padding-left: 5vw;
-  margin-top: -9vw;
-  padding-top: 36px;
   padding-bottom: 2.7vw;
   font-size: 5vw;
   color: white;
@@ -307,8 +306,9 @@ input[type='checkbox']{
   background:white;
   border-radius: 1vw;
   padding: 1.5vw 2.5vw;
-  width: 70vw;
+  width: 68.7vw;
   left: 6vw;
+  padding-left: 3.8vw;
   transition: all 0.5s;
   display: block;
   position: relative;
@@ -317,9 +317,25 @@ input[type='checkbox']{
   color: black;
   transition: color 0.3s;
   transition: border-bottom-left-radius 0.5s, border-bottom-right-radius 0.5s, color 0.5s;
+  filter: drop-shadow(-0.6vw 0.3vw 0.6vw #00000048);
+
 }
 .timelineContentTitleCollapse:hover{
   color: #000000a4;
+}
+
+.timelineContentTitleCollapse:after{
+  width:0;
+  height:0;
+  content: "";
+  position: absolute;
+  display: block;
+  left: 1.8vw;
+  top: 2.3vw;
+  border-top: 0.4vw solid transparent;
+  border-bottom: 0.4vw solid transparent;
+  border-left: 0.8vw solid #0000009f;
+  transition: transform 0.5s;
 }
 
 .timelineContentTitleCollapse:before{
@@ -333,7 +349,6 @@ input[type='checkbox']{
   border-top: 2vw solid transparent;
   border-bottom: 2vw solid transparent;
   border-right: 2.5vw solid white;
-  filter: drop-shadow(-0.6vw 0.3vw 0.6vw #00000048);
 }
 
 .timelineCollapsableContent{
@@ -357,6 +372,10 @@ input[type='checkbox']{
 .toggle:checked + .timelineContentTitleCollapse{
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-left: 0vw solid white;
+}
+.toggle:checked + .timelineContentTitleCollapse:after {
+  transform: rotate(90deg);
 }
 
 .timelineDot:before{
@@ -411,7 +430,7 @@ input[type='checkbox']{
   background-image: url("assets/waveBottom.png");
   background-repeat: repeat-x;
   width: 1728px;
-  height: 13vw;
+  height: calc(30px + 4vw);
   animation: waveMove 12s infinite linear;
   overflow: hidden;
   position: relative;
@@ -425,8 +444,9 @@ input[type='checkbox']{
 .experienceTitle{
   font-family: 'ProductSansBold';
   padding-left: 5vw;
-  margin-top: -9vw;
-  padding-top: 70px;
+  padding-top: 4vw;
+  padding-bottom: 2vw;
+  margin-top: calc(15px - 4vw);
   font-size: 5vw;
   color: rgb(0, 0, 0);
   position: relative;
@@ -435,19 +455,23 @@ input[type='checkbox']{
 
 .experienceBox{
   background: #276ED9;
+  background-image: linear-gradient(to left, #748bed,#75d8ef);
+  background-attachment: fixed;
   position: relative;
   border-top-left-radius: 1vw;
   border-top-right-radius: 1vw;
-  content:"";
   width: 22vw;
   height: 17vw;
-  margin-left: 8vw;
   box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
-  transition: background 0.5s;
+  transition: opacity 0.5s;
+}
+
+th{
+  padding-left: 8vw;
 }
 
 .experienceBox:hover{
-  background: rgb(24, 69, 136);
+  opacity: 0.7;
 }
 
 .experienceBoxText{
@@ -457,7 +481,6 @@ input[type='checkbox']{
   border-bottom-left-radius: 1vw;
   border-bottom-right-radius: 1vw;
   width: 22vw;
-  margin-left: 8vw;
   font-family: 'ProductSansBold';
   padding-top: 0.62vw;
   padding-bottom: 0.62vw;
@@ -472,9 +495,150 @@ input[type='checkbox']{
   color: #00000070;
 }
 
+
+
+
+.blobsArea{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.blobs{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.blobs li{
+  position: absolute;
+  display:block;
+  background: #00000000;
+  animation: float 25s linear infinite;
+  bottom: -150px;
+  width: 10vw;
+  height: 10vw;
+  box-shadow: 0 0.2vw 0.5vw 0.1vw #00000056;
+}
+
+.blobs li:nth-child(1){
+  left: 25%;
+  width: 6.75vw;
+  height: 6.75vw;
+  animation-delay: -40s;
+  animation-duration: 52s;
+}
+
+.blobs li:nth-child(2){
+  left: 35%;
+  width: 13.5vw;
+  height: 13.5vw;
+  animation-delay: -8s;
+  animation-duration: 50s;
+}
+
+.blobs li:nth-child(3){
+  left: 15%;
+  width: 9vw;
+  height: 9vw;
+  animation-delay: -17s;
+  animation-duration: 48s;
+}
+
+.blobs li:nth-child(4){
+  left: 65%;
+  width: 12vw;
+  height: 12vw;
+  animation-delay: -14s;
+  animation-duration: 40s;
+}
+
+.blobs li:nth-child(5){
+  left: 55%;
+  width: 8.25vw;
+  height: 8.25vw;
+  animation-delay: 28s;
+  animation-duration: 35s;
+}
+
+.blobs li:nth-child(6){
+  left: 85%;
+  width: 12.7vw;
+  height: 12.7vw;
+  animation-delay: -27s;
+  animation-duration: 49s;
+}
+
+.blobs li:nth-child(7){
+  left: 75%;
+  width: 10vw;
+  height: 0vw;
+  animation-delay: 10s;
+  animation-duration: 38s;
+}
+
+.blobs li:nth-child(8){
+  left: 95%;
+  width: 7vw;
+  height: 7vw;
+  animation-delay: -30s;
+  animation-duration: 36s;
+}
+
+.blobs li:nth-child(9){
+  left: 45%;
+  width: 9vw;
+  height: 9vw;
+  animation-delay: 10s;
+  animation-duration: 41s;
+}
+
+.blobs li:nth-child(10){
+  left: 5%;
+  width: 11vw;
+  height: 11vw;
+  animation-delay: -29s;
+  animation-duration: 50s;
+}
+
+@keyframes float{
+  0%{transform: translateY(0) rotate(0deg) ;
+  opacity: 1;
+  border-radius: 0}
+  100%{transform: translateY(-1000px) rotate(-700deg) ;
+    opacity: 0;
+    border-radius: 50%}
+}
+
 .end{
   background: #292B37;
-  content: "";
-  padding: calc(20px + 1.3vw);;
+  padding-top: 2.4vw;
   box-shadow: 0 0.2vw 1.2vw 0 #0000006c;
+  font-family: 'ProductSansRegular';
+  color:white;
+}
+
+.endSubHead{
+  font-size: calc(6px + 0.7vw);
+  text-align: center;
+  padding-bottom: 0.6vw;
+}
+
+.endHead{
+  font-size: calc(6px + 1.7vw);
+  text-align: center;
+  padding-bottom: 0.6vw;
+}
+
+.endHead a{
+  color:white;
+}
+
+.endSubBottom{
+  font-size: calc(3px + 0.8vw);
+  text-align: right;
+  color:rgba(255, 255, 255, 0.308);
+  padding-top: 2vw;
 }
