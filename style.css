@@ -20,6 +20,16 @@ html, body {
 #rotateMessage{
   display:none;
 }
+
+@media all and (orientation:portrait){
+  #page{
+      display:none;
+    }
+  #rotateMessage{
+    display:block;
+  }
+}
+
 .rotateMessageImage{
   width: 30%;
   padding-top: 10vw;
@@ -38,15 +48,6 @@ html, body {
   animation: revealIn 1s forwards;
   opacity:0;
   text-align: center;
-}
-
-@media all and (orientation:portrait){
-  #page{
-      display:none;
-    }
-  #rotateMessage{
-    display:block;
-  }
 }
 
 p {
