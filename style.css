@@ -52,3 +52,118 @@ html, body {
 .messageLink:hover{
 	opacity:0.5;
 }
+
+
+.blobsArea{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.blobs{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blobs li{
+  position: absolute;
+  display:block;
+  background: #00000000;
+  animation: float 25s linear infinite;
+  bottom: -150px;
+  width: 10vw;
+  height: 10vw;
+  box-shadow: 0 0.2vw 0.5vw 0.1vw #00000056;
+}
+
+.blobs li:nth-child(1){
+  left: 25%;
+  width: 6.75vw;
+  height: 6.75vw;
+  animation-delay: -40s;
+  animation-duration: 52s;
+}
+
+.blobs li:nth-child(2){
+  left: 35%;
+  width: 13.5vw;
+  height: 13.5vw;
+  animation-delay: -8s;
+  animation-duration: 50s;
+}
+
+.blobs li:nth-child(3){
+  left: 15%;
+  width: 9vw;
+  height: 9vw;
+  animation-delay: -17s;
+  animation-duration: 48s;
+}
+
+.blobs li:nth-child(4){
+  left: 65%;
+  width: 12vw;
+  height: 12vw;
+  animation-delay: -14s;
+  animation-duration: 40s;
+}
+
+.blobs li:nth-child(5){
+  left: 55%;
+  width: 8.25vw;
+  height: 8.25vw;
+  animation-delay: 28s;
+  animation-duration: 35s;
+}
+
+.blobs li:nth-child(6){
+  left: 85%;
+  width: 12.7vw;
+  height: 12.7vw;
+  animation-delay: -27s;
+  animation-duration: 49s;
+}
+
+.blobs li:nth-child(7){
+  left: 75%;
+  width: 10vw;
+  height: 10vw;
+  animation-delay: 10s;
+  animation-duration: 38s;
+}
+
+.blobs li:nth-child(8){
+  left: 95%;
+  width: 7vw;
+  height: 7vw;
+  animation-delay: -30s;
+  animation-duration: 36s;
+}
+
+.blobs li:nth-child(9){
+  left: 45%;
+  width: 9vw;
+  height: 9vw;
+  animation-delay: 10s;
+  animation-duration: 41s;
+}
+
+.blobs li:nth-child(10){
+  left: 5%;
+  width: 11vw;
+  height: 11vw;
+  animation-delay: -29s;
+  animation-duration: 50s;
+}
+
+@keyframes float{
+  0%{transform: translateY(0) rotate(0deg) ;
+  opacity: 1;
+  border-radius: 0}
+  100%{transform: translateY(-1000px) rotate(-700deg) ;
+    opacity: 0;
+    border-radius: 50%}
+}
