@@ -134,7 +134,8 @@ html, body {
 .messageMainLink{
   animation: revealIn 1s forwards;
   animation-delay: 4s;
-  padding-bottom: 5vh;
+  padding-top: 30vh;
+
 
 }
 .messageLink{
