@@ -10,10 +10,10 @@
 
 .centerMiddle{
   position: absolute;
-  top: -1000vw;
-  bottom: -1000vw;
-  left: -1000vw;
-  right: -1000vw;
+  top: -10000vw;
+  bottom: -10000vw;
+  left: -10000vw;
+  right: -10000vw;
   margin: auto;
 }
 
@@ -120,7 +120,6 @@ html, body {
   font-family: 'ProductSansBold';
   font-size: 4vw;
   text-align: center;
-  color: white;
   z-index: 1;
   opacity: 0;
 }
@@ -129,6 +128,7 @@ html, body {
   animation: revealInOut 2.5s forwards ease-in-out;
   animation-delay: 1s;
   padding-top: 30vh;
+  color: white;
 }
 
 .messageMainLink{
