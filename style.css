@@ -135,7 +135,7 @@ html, body {
 
 .messageMainLink{
   animation: revealIn 1s forwards;
-  animation-delay: 4s;
+  animation-delay: 5s;
   padding-top: 30vh;
   color: rgb(0, 0, 0);
 
@@ -145,7 +145,7 @@ html, body {
   padding: 3vh;
   font-size: 2vw;
   animation: revealIn 1s forwards;
-  animation-delay: 4s;
+  animation-delay: 5s;
   text-align: center;
   color: rgb(0, 0, 0);
   opacity:0;
