@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "MoonLight";
+  src: url("assets/fonts/Moon2.0-Light.ttf")  format("truetype");
+  font-weight: light;
+}
+@font-face {
+  font-family: "SanFran";
+  src: url("assets/fonts/SanFranciscoDisplay-Regular.otf")  format("opentype");
+}
+@font-face {
+  font-family: "ProductSansBold";
+  src: url("assets/fonts/Product Sans Bold.ttf")  format("truetype");
+  font-weight: bold;
+}
+
+html, body {
+  max-width: 100%;
+  /*overflow-x: hidden;*/
+}
+
+.animateInMain {
+    -webkit-animation: fadeIn 1s ease-in;
+}
+.animateIn {
+    -webkit-animation: fadeIn 0.5s ease-in;
+}
+
+
+.container {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.bigText{
+  font-family: 'ProductSansBold';
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  transform: translateX(100px);
+}
+.welcome{
+  padding-top: 100px;
+  font-size: 70px;
+  animation: revealIn 1s forwards;
+  opacity:0;
+  animation-delay: 0.5s;
+}
+.name{
+  font-size: 100px;
+  animation: revealIn 1s forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
+}
+
+/*@keyframes revealInVanish {
+  0% {width:0%;}
+  25% {width:100%;}
+  75% {width:100%;}
+  99% {width:0%;
+    position: absolute;}
+  100% {width:0%;
+    position: absolute;}
+}*/
+@keyframes shrink {
+  0% {transform: scale(1);}
+  100% {transform: scale(0.7);}
+}
+
+@keyframes revealIn {
+  0% {opacity: 0;
+    transform: translate(10px, 0px)}
+  100% {opacity:1;}
+}
+
+.top{
+  padding: 10px 10px;
+  font-size: 18px;
+  font-family: 'SanFran';
+  text-align: center;
+  word-spacing: 30px;
+}
