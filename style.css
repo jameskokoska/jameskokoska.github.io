@@ -286,6 +286,16 @@ a{
   }
 }
 
+@media only screen and (max-width: 810px) and (min-width: 767px) {
+  .topSocialContainer{
+    right:2px;
+  }
+  .topSocial img{
+    margin: 1px;
+    margin-top: 5px;
+  }
+}
+
 @keyframes revealIn {
   0% {
     opacity: 0;
