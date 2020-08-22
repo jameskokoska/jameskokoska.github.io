@@ -6,15 +6,14 @@
         <link rel="stylesheet" href="style.css">
         
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-        
-        
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body id=bodyContainer>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+        <script>AOS.init();</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <div class="blobsArea">
             <ul class="blobs">
@@ -30,38 +29,59 @@
                 <li></li>
             </ul>
         </div>
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto topPageLinksContainer">
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#timeline">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#software">Software</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link topPageLinks" href="#education">Education</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="topSocialContainer topContainerSwap2">
+                <a href="https://www.linkedin.com/in/james-kokoska-80902019b/" target="_blank"><div class="topSocial"><img src="assets/linkedin-brands.png"></div></a>
+                <a href="https://www.github.com/jameskokoska" target="_blank"><div class="topSocial"><img src="assets/github-brands.png"></div></a>
+                <a href="#email"><div class="topSocial"><img src="assets/envelope-square-solid.png"></div></a>
+            </div>
+        </nav>
 
-    <div class="top">
-            <div class="topPageLinksContainer">
-                    <a href="#timeline">Timeline</a>
-                    <a href="#software">Software</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#education">Education</a>
+        <div class="introSection">
+            <div class="bioPic fadeEntranceAnimationDelay">
+                <img src="assets/me.jpg" style="width:100%;">
             </div>
-            <div class="topSocialContainer">
-                <a href="https://www.linkedin.com/in/james-kokoska-80902019b/" target="_blank"><figure><div class="topSocial"><img src="assets/linkedin-brands.png"></div></figure></a>
-                <a href="https://www.github.com/jameskokoska" target="_blank"><figure><div class="topSocial"><img src="assets/github-brands.png"></div></figure></a>
-                <a href="#email"><figure><div class="topSocial"><img src="assets/envelope-square-solid.png"></div></figure></a>
+            <h2 class="revealIn">
+                Hello!
+            </h2>
+            <h1 class="revealIn d1">
+                I'm James
+            </h1>
+            <div class="bigText name">
+                I'm James
             </div>
-    </div>
-    <div class="bioPic fadeEntranceAnimationDelay">
-        <img src="assets/me.jpg" style="width:100%;">
-    </div>
-    <div class="bigText welcome">
-        Hello!
-    </div>
-    <div class="bigText name">
-        I'm James
-    </div>
-    <div class="bioDescription fadeEntranceAnimation">
-        I'm a second year Computer Engineering student at the University of Toronto.
-    </div>
-    
-    <a href="#timeline">
-        <div class="button scaleEntranceAnimation" style="margin-left: 8.9vw; margin-top: 3vw;">
-            View my Timeline
+            <div class="bioDescription fadeEntranceAnimation">
+                I'm a third year Computer Engineering student at the University of Toronto.
+            </div>
+            <a href="#timeline">
+                <div class="button scaleEntranceAnimation" style="margin-left: 8.9vw; margin-top: 3vw;">
+                    View my Timeline
+                </div>
+            </a>
         </div>
-    </a>
+        
+    
+    
 
     <div class=scrollArrow></div>
 
@@ -88,7 +108,7 @@
                 <div class="timelineDiamond" data-aos="zoom-in">
                     <div data-aos="fade-up" data-aos-delay="50">
                         <input id="timelineCollapsable20" class="toggle" type="checkbox">
-                        <label for="timelineCollapsable20" class="timelineContentTitleCollapse">Academic Mentor, UofT Engineering Academy<p>Summer 2020</p></label>
+                        <label for="timelineCollapsable20" class="timelineContentTitleCollapse"><p></p>Academic Mentor, UofT Engineering Academy super long name test test test test test<p>Summer 2020</p></label>
                         <div class="timelineCollapsableContent">
                             <ul>
                                 <li><p>Responsible for organizing, creating, and distributing lesson plans based on a curriculum</p></li>
@@ -357,7 +377,7 @@
         </div></div>
     </div>
     <div class="experienceSection">
-        <table>
+        <!-- <table>
             <div class="experienceTitle" data-aos="fade-right">
                 Software Experience
             </div>
@@ -682,7 +702,7 @@
                     </a>
                 </th>
             </tr>
-        </table>
+        </table> -->
     </div>
 
     <div class=projectsTopHide>
