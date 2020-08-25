@@ -517,7 +517,7 @@ input[type='checkbox']{
 }
 
 .projectsSection{
-  margin-top: 130px;
+  margin-top: 30px;
   padding-top: 20px;
 }
 
@@ -602,7 +602,7 @@ input[type='checkbox']{
 }
 
 .educationSection{
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .educationSectionContent{
@@ -846,8 +846,8 @@ input[type='checkbox']{
     padding-bottom:1.2vw;
   }
   .projectsSection{
-    margin-top: 20px;
-    padding-top: 40px;
+    margin-top: 0px;
+    padding-top: 30px;
   }
   .projectsTitle{
     font-size: 40px;
@@ -899,6 +899,10 @@ input[type='checkbox']{
     border-radius: 20px;
     width: 90vw;
     left: 5vw;
+  }
+  .educationSection{
+    margin-top: -110px;
+    padding-top: 110px;
   }
 
   .educationTitle{
