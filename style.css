@@ -15,6 +15,10 @@ html, body {
   overflow-x: hidden;
 }
 
+a:link{
+  text-decoration: none!important;
+}
+
 ::-webkit-scrollbar {
   width: 13px;
 }
