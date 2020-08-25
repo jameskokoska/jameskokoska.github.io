@@ -176,10 +176,10 @@ a{
 .button{
   font-size: calc(6px + 0.75vw);
   border-radius: 5vw;
-  padding-top: 0.9%;
-  padding-bottom: 0.9%;
-  padding-left: 2.2%;
-  padding-right: 2.2%;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   font-family: 'ProductSansRegular';
   background-color: #3651ef;
   background-image: linear-gradient(to right, #36D1DC,#5B86E5, #6015a5, #6015a5);
@@ -190,7 +190,6 @@ a{
   transition: background-position 0.5s, box-shadow 0.1s;
   box-shadow: 0 0.2vw 0.5vw 0 #00000066;
   cursor: pointer;
-  margin-left: 8.6vw;
 }
 
 .button:hover{
@@ -246,7 +245,8 @@ a{
 }
 
 .timelineSection{
-  padding-top: 150px;
+  margin-top: 130px;
+  padding-top: 20px;
 }
 
 .timelineSectionContent{
@@ -407,6 +407,200 @@ input[type='checkbox']{
   position: relative;
 }
 
+.experienceSection{
+  margin-top: -50px;
+  padding-top: 110px;
+}
+
+.experienceSectionContent{
+}
+
+.experienceTitle{
+  font-size: 5vw;
+  padding-left: 5vw;
+  font-family: 'ProductSansBold';
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.experienceContainerLarge{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.experienceBoxContainer{
+  padding:2vw;
+  padding-bottom:0.1vw;
+}
+
+.experienceBox{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 160px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #276ED9;
+  background-image: linear-gradient(to left, #748bed,#75d8ef);
+  background-attachment: fixed;
+  position: relative;
+  box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
+  user-select:none;
+  overflow:hidden;
+}
+
+.experienceBoxHoverEnable img{
+  margin-top: -5px;
+  transition: all 0.5s;
+}
+
+.experienceBoxHoverEnable:hover img{
+  margin-top: -300px;
+}
+
+.experienceBoxText{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 160px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  color: #000000;
+  font-family: 'ProductSansBold';
+  text-align: center;
+  box-shadow: 0 0.2vw 0.5vw 0 #00000066;
+  transition: color 0.5s;
+}
+
+.experienceBoxText:hover{
+  color: #00000070;
+}
+
+.experienceBoxHover{
+  background: #ffffff8f;
+  opacity: 0;
+  position:absolute;
+  width: 200px;
+  height: 190px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 1;
+  transition: all 0.5s;
+  text-align: center;
+
+}
+.experienceBoxHoverTitle{
+  font-size: 18px;
+  font-family: 'ProductSansBold';
+  color: #000000;
+  padding-top: 15px;
+}
+
+.experienceBoxHover:hover{
+  opacity: 1;
+  padding-top:20px;
+}
+
+.githubHover{
+  width:80px; 
+  padding-top: 307px; 
+  filter: drop-shadow(0px 0.3vw 0.6vw #00000083);
+}
+
+.projectsSection{
+  margin-top: 130px;
+  padding-top: 20px;
+}
+
+.projectsSectionContent{
+  padding-bottom: 4vw;
+  padding-top: 4vw;
+  background-color: #79d0fc;
+}
+
+.projectsTitle{
+  font-size: 5vw;
+  padding-left: 5vw;
+  padding-bottom: 3vw;
+  font-family: 'ProductSansBold';
+  color: #013567;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.582);
+  border-radius: 10px;
+}
+
+.projectsSection .carousel, .slide,
+.carousel .carousel-inner,
+.carousel .carousel-item,
+.carousel .carousel-item img,
+.carousel .carousel-control {
+  border-radius: 10px;
+  overflow: hidden;
+  width:46vw;
+}
+.projectsSlideshow{
+  margin-left: 40vw;
+  padding-bottom: 2vw;
+  padding-bottom: 2vw;
+}
+.projectsDescriptionsSide{
+  width: 35vw;
+  z-index:100;
+  margin-left: 4vw;
+  position: absolute;
+}
+
+.projectsSection h1{
+  font-weight: normal;
+  font-style:normal;
+  font-family: 'ProductSansBold';
+  font-size: 28px;
+  color: black;
+}
+
+.projectsSection h2{
+  margin-top:1vw;
+  margin-bottom:-0.2vw;
+  font-family: 'ProductSansBold';
+  font-size: 22px;
+  font-weight: normal;
+  font-style:normal;
+}
+
+.projectsSection p{
+  font-family: 'ProductSansRegular';
+  font-size: 20px;
+}
+
+.projectsSection li{
+  font-family: 'ProductSansRegular';
+  font-size: 18px;
+}
+
+.projectsBox{
+  padding-top:2vw;
+  background:white;
+  border-radius: 20px;
+  width: 90vw;
+  left: 5vw;
+  display: block;
+  position: relative;
+  filter: drop-shadow(-0.6vw 0.3vw 0.6vw #00000048);
+}
+
 
 @media only screen and (max-width: 767px) {
   .topSocialContainer{
@@ -453,6 +647,10 @@ input[type='checkbox']{
     border-bottom: 15px solid transparent;
     border-right: 15px solid rgba(0, 0, 0, 0.493);
   }
+  .timelineSection{
+    margin-top: 20px;
+    padding-top: 40px;
+  }
   .timelineSectionContent{
     padding-bottom: 20px;
     padding-top: 20px;
@@ -460,7 +658,7 @@ input[type='checkbox']{
   .timelineTitle{
     font-size: 40px;
     padding-left: 5vw;
-    padding-bottom: 20px;
+    padding-bottom: 9px;
   }
   .timelineContentTitleCollapse{
     margin-top: 7px;
@@ -512,6 +710,29 @@ input[type='checkbox']{
     height:100%;
     padding-bottom: 0.9vw;
     padding-top: 1.3vw;
+  }
+
+  .experienceTitle{
+    font-size: 40px;
+    padding-left: 5vw;
+    padding-bottom: 9px;
+  }
+  .experienceSection{
+    margin-top: -55px;
+    padding-top: 70px;
+  }
+  .experienceContainerLarge{
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .experienceBoxContainer{
+    padding:2vw;
+    padding-bottom:1.2vw;
+  }
+  .projectsTitle{
+    font-size: 40px;
+    padding-left: 5vw;
+    padding-bottom: 9px;
   }
 }
 
@@ -615,6 +836,10 @@ input[type='checkbox']{
   background: #4150A8;
 }
 
+.waveProjects{
+  background: #79d0fc;
+}
+
 @keyframes waveMove {
   0% {
     transform: rotate(0deg);
@@ -671,148 +896,7 @@ input[type='checkbox']{
 
 
 
-/*Chrome only: https://browserstrangeness.bitbucket.io/css_hacks.html#webkit */
-/*@supports (-webkit-appearance:none) and (font-variant-caps:normal) and (not (-ms-accelerator:true)) and (not (overflow:-webkit-marquee)) and (not (-moz-appearance:none)){
-  .top {  
-    backdrop-filter: blur(20px);    
-    -webkit-backdrop-filter: blur(20px);
-  } 
-  .topPageLinksContainer a:before{
-    position:absolute;
-    content:"";
-    height: 0.1vw;
-    bottom: 1.7vw;
-    background-color: #385366;
-    background-image: linear-gradient(to right, #36D1DC,#5B86E5, #6015a5, #6015a5);
-    background-size:220%;
-    transition: 0.5s;
-    max-width: 0;
-    right: 0;
-    left:0;
-    margin: auto;
-    display: inline-block;
-  }
-}*/
 
-/*Firefox only*/
-/*@-moz-document url-prefix() { 
-  .top {
-    background-color: #dadadaf3;
-  }
-  .topPageLinksContainer a:before{
-    position:absolute;
-    content:"";
-    height: 0.1vw;
-    bottom: 1.7vw;
-    background-color: #385366;
-    background-image: linear-gradient(to right, #36D1DC,#5B86E5, #6015a5, #6015a5);
-    background-size:220%;
-    transition: 0.5s;
-    max-width: 0;
-    right: 0;
-    left:0;
-    margin: auto;
-    display: inline-block;
-  }
-}
-*/
-
-/*.topPageLinksContainer a:hover:before{
-  max-width: calc(60px + 1.5vw);
-}*/
-
-
-
-
-.experienceContainerLarge{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
-}
-
-.experienceTitle{
-  font-family: 'ProductSansBold';
-  padding-left: 5vw;
-  padding-top: 4vw;
-  padding-bottom: 2vw;
-  margin-top: calc(15px - 4vw);
-  font-size: 5vw;
-  color: rgb(0, 0, 0);
-  position: relative;
-  margin-bottom: 3vw;
-}
-
-.experienceBox{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  background: #276ED9;
-  background-image: linear-gradient(to left, #748bed,#75d8ef);
-  background-attachment: fixed;
-  position: relative;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 200px;
-  height: 180px;
-  box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
-  user-select:none;
-  overflow:hidden;
-}
-
-.experienceBoxHoverEnable img{
-  margin-top: 0vw;
-  transition: all 0.5s;
-}
-
-.experienceBoxHoverEnable:hover img{
-  margin-top: -20vw;
-
-}
-
-.experienceBoxText{
-  background: #ffffff;
-  color: #000000;
-  border-bottom-left-radius: 10px;;
-  border-bottom-right-radius: 10px;;
-  width: 200px;
-  font-family: 'ProductSansBold';
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 20px;
-  text-align: center;
-  box-shadow: 0 0.2vw 0.5vw 0 #00000066;
-  margin-bottom: 5vw;
-  transition: color 0.5s;
-}
-
-.experienceBoxText:hover{
-  color: #00000070;
-}
-
-.experienceBoxHover{
-  background: #ffffff8f;
-  opacity: 0;
-  position:absolute;
-  width: 200px;
-  height: 180px;
-  border-top-left-radius: 10px ;
-  border-top-right-radius: 10px;
-  z-index: 1;
-  transition: all 0.5s;
-  text-align: center;
-
-}
-.experienceBoxHoverTitle{
-  font-size: 18px;
-  font-family: 'ProductSansBold';
-  color: #000000;
-  padding-top: 15px;
-}
 
 .experienceBoxHoverProjects{
   font-size: 18px;
@@ -824,10 +908,7 @@ input[type='checkbox']{
   color: #9c9c9c;
 }
 
-.experienceBoxHover:hover{
-  opacity: 1;
-  padding-top:2vw;
-}
+
 
 .buttonProjects1 {
   font-size: calc(6px + 0.85vw);
@@ -969,21 +1050,7 @@ input[type='checkbox']{
   position: relative;
 }
 
-.projectsTitle{
-  font-family: 'ProductSansBold';
-  padding-left: 5vw;
-  padding-bottom: 2vw;
-  margin-top: calc(15px - 4vw);
-  font-size: 5vw;
-  color: #013567;
-  position: relative;
-  margin-bottom: 3vw;
-}
-.projectsSection{
-  background:#79d0fc;
-  padding-bottom: 7vw;
-  padding-top: 3vw;
-}
+
 
 .projectsSectionBottom{
   background:#79d0fc;
@@ -993,54 +1060,8 @@ input[type='checkbox']{
   padding-bottom:3.4vw;
 }
 
-.projectBox{
-  background:white;
-  border-radius: 1vw;
-  padding: 0.5vw 4vw;
-  width: 70vw;
-  left: 10vw;
-  display: block;
-  position: relative;
-  filter: drop-shadow(-0.6vw 0.3vw 0.6vw #00000048);
-  margin-top: 2.5vw;
-  padding-bottom: 3.5vw;
-}
 
-.projectBox h1{
-  font-weight: normal;
-  font-style:normal;
-  font-family: 'ProductSansBold';
-  font-size: calc(8px + 1.7vw);
-  color: black;
-}
 
-.projectBox h2{
-  margin-top:1vw;
-  margin-bottom:-1vw;
-  font-family: 'ProductSansBold';
-  font-size: calc(5px + 1.5vw);
-  font-weight: normal;
-  font-style:normal;
-}
-
-.projectBox h3{
-  margin-top:-1vw;
-  font-family: 'ProductSansBold';
-  font-size: calc(4px + 1.3vw);
-  font-weight: normal;
-  font-style:normal;
-  margin-bottom: -0.7vw;
-}
-
-.projectBox p{
-  font-family: 'ProductSansRegular';
-  font-size: calc(4px + 1.3vw);
-}
-
-.projectBox li{
-  font-family: 'ProductSansRegular';
-  font-size: calc(4px + 1.3vw);
-}
 
 .projectBox th{
   font-weight: normal;
@@ -1267,9 +1288,7 @@ input[type='checkbox']{
 }
 
 
-.waveProjects{
-  background: #79d0fc;
-}
+
 
 .waveEducation{
   background: #006FA6;

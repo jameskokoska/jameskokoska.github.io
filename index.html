@@ -15,6 +15,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
         <div class="blobsArea">
             <ul class="blobs">
                 <li></li>
@@ -71,7 +72,7 @@
                 I'm a third year Computer Engineering student at the University of Toronto.
             </div>
             <a href="#timeline">
-                <div class="button scaleIn d3">
+                <div class="button scaleIn d3" style="margin-left: 8.6vw;">
                     View my Timeline
                 </div>
             </a>
@@ -79,8 +80,8 @@
             <div class=scrollArrow></div>
         </div>
 
-        <div class="timelineSection" >
-            <div class="waveOffset" id="timeline">
+        <div class="timelineSection" id="timeline">
+            <div class="waveOffset">
                 <div class="wave waveTop waveTimeline"></div>
                 <div class="wave waveTop waveTimeline"></div>
                 <div class="wave waveTop waveTimeline"></div>
@@ -97,19 +98,29 @@
                     Timeline 
                 </h1>
                 <div class="timelineContentLine">
-                    <div class="timelineDot" data-aos="zoom-in">
-                        <div data-aos="fade-up" data-aos-delay="50">
-                            <input id="timelineCollapsable18" class="toggle" type="checkbox">
-                            <label for="timelineCollapsable18" class="timelineContentTitleCollapse"><p>September 2019</p>Volunteer, UofT Engineering Frosh Matriculation</label>
-                            <div class="timelineCollapsableContent">
-                                <ul>
-                                    <li><p>Assisted with the Matriculation Frosh assembly audio and visual technicalities</p></li>
-                                    <li><p>Assured adequate equipment stock during performance screenings and planned the technical requirements schedule for each performance of the event</p></li>
-                                    <li><p>Controlled and maintained the audio and visual aspects to ensure smooth during individual performances of the assembly for over a thousand new engineering students</p></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <script src="data.js"></script>
+                    <div id="timelineBoxes"></div>
+                    <script>
+                        readData(timeline);
+                        
+                        function readData(arr) {
+                            var out = "";
+                            var i;
+                            for(i = 0; i < arr.length; i++) {
+                                out+='<div class="timelineDot" data-aos="zoom-in">';
+                                    out+='<div data-aos="fade-up" data-aos-delay="50">';
+                                        out+='<input id="timelineCollapsable'+ i + '" class="toggle" type="checkbox">';
+                                        out+='<label for="timelineCollapsable'+ i + '" class="timelineContentTitleCollapse"><p>'+arr[i].date+'</p>'+arr[i].title+'</label>';
+                                        out+='<div class="timelineCollapsableContent">';
+                                        out+='<ul>';
+                                            out+=arr[i].description;
+                                        out+='</ul>';
+                                    out+='</div>';
+                                out+='</div>';
+                            }
+                            document.getElementById("timelineBoxes").innerHTML = out;
+                        }
+                    </script>
                 </div>
             </div>
             <div class="waveOffset">
@@ -124,337 +135,141 @@
                 <div class="wave waveBottom waveTimeline"></div>
                 <div class="wave waveBottom waveTimeline"></div>
             </div>
-            
         </div>
             
 
-    <div class="experienceSection">
-        <!-- <table>
-            <div class="experienceTitle" data-aos="fade-right">
-                Software Experience
+    <div class="experienceSection" id="software">
+        <div class="experienceSectionContent">
+            <h1 class="experienceTitle" data-aos="fade-right">
+                Software and Tools
+            </h1>
+        </div>
+
+        <script src="data.js"></script>
+        <div class="experienceContainerLarge" id="experienceBoxes"></div>
+        <script>
+            readData(experience);
+            
+            function readData(arr) {
+                var out = "";
+                var i;
+                for(i = 0; i < arr.length; i++) {
+                    if(arr[i].linkGithub==='true'){
+                        out+='<div>'
+                            out+='<div data-aos="zoom-in" data-aos-delay="0" class="experienceBoxContainer">';
+                                out+='<a href="https://github.com/jameskokoska?tab=repositories" target="_blank">';
+                                    out+='<div class="experienceBox experienceBoxHoverEnable" >';
+                                        out+='<div class="experienceBoxHover">';
+                                            out+='<div class="experienceBoxHoverTitle">View my GitHub</div>';
+                                            out+='<img src="assets/github.png" class="githubHover">';
+                                        out+='</div>';
+                                        out+='<img src="'+ arr[i].image +'" style="width:100%; padding: 20%;filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">';
+                                    out+='</div>';
+                                out+='</a>';
+                                out+='<a href="'+arr[i].softwareLink+'" target="_blank">';
+                                    out+='<div class="experienceBoxText">';
+                                        out+=arr[i].software;
+                                    out+='</div>';
+                                out+='</a>';
+                            out+='</div>'
+                        out+='</div>'
+                    } else {
+                        out+='<div>'
+                            out+='<div data-aos="zoom-in" data-aos-delay="0" class="experienceBoxContainer">';
+                                out+='<div class="experienceBox" >';
+                                    out+='<img src="'+ arr[i].image +'" style="width:100%; padding: 20%;filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">';
+                                out+='</div>';
+                                out+='<a href="'+arr[i].softwareLink+'" target="_blank">';
+                                    out+='<div class="experienceBoxText">';
+                                        out+=arr[i].software;
+                                    out+='</div>';
+                                out+='</a>';
+                            out+='</div>'
+                        out+='</div>'
+                    }
+                }
+                document.getElementById("experienceBoxes").innerHTML = out;
+            }
+        </script>
+    </div>
+
+    <div class="projectsSection" id="projects">
+        <div class="waveOffset">
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+        </div>
+        <div class="projectsSectionContent">
+            <div class="projectsTitle" data-aos="fade-right">
+                Projects
             </div>
-            <div class="experienceContainerLarge">
-                <div>
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable" >
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/python.png" style="width:100%; padding: 20%;filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.python.org/" target="_blank">
-                        <div class="experienceBoxText">
-                            Python
+            <div class="projectsBox">
+                <div class="projectsDescriptionsSide">
+                    <h1>Verilog Piano Tiles</h1>
+                        <p>A Piano Tiles game written entirely in the hardware based language, Verilog.</p> 
+                        <p>Made for the DE1-SoC FPGA board.</p>
+                    <h2>Features</h2>
+                    <ul>
+                        <li>2 gamemodes</li>
+                        <li>Pseudo random tiles</li>
+                        <li>Final scores</li>
+                        <li>PS2 Keyboard support</li>
+                    </ul>
+                    <a href="https://github.com/jameskokoska/PianoTiles-Verilog" target="_blank">
+                        <div class="button">
+                            View Github
                         </div>
                     </a>
                 </div>
-                
-                <a href="https://github.com/jameskokoska?tab=repositories">
-                    <div class="experienceIconLarge" style="background:#5e92f3">
-                        <img src=assets/python.png alt="Python"></img>
+                <div class="projectsSlideshow">
+                    <div id="carouselIndicators" data-interval="6000" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Title-Screen.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Title Screen</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Random-Queue-Start.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Random Tile Queue on Start</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Progress-Bar-and-Incorrect-Tile.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Incorrect Tile, Progress Bar on Side</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Final-Score-Screen.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Final Score</h5>
+                            </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                </a>
-                <a href="https://github.com/jameskokoska?tab=repositories">
-                    <div class="experienceIconLarge" style="background:#5e92f3">
-                        <img src=assets/python.png alt="Python"></img>
-                    </div>
-                </a>
+                </div>
             </div>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable" >
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/python.png" style="width:11vw; padding: 3vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.python.org/" target="_blank">
-                        <div class="experienceBoxText">
-                            Python
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/c-programming.png" style="width:13.5vw; padding: 1.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.cprogramming.com/" target="_blank">
-                        <div class="experienceBoxText">
-                            C
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/c++programming.png" style="width:11vw; padding: 2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.cprogramming.com/" target="_blank">
-                        <div class="experienceBoxText">
-                            C++
-                        </div>
-                    </a>
-                </th>
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <a href="#projects">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my Projects</div> 
-                                <img src="assets/tools.png" style="width:8vw; padding-top: 22.2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/quartus.png" style="width:10.7vw; padding: 2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.intel.com/content/www/us/en/products/programmable.html" target="_blank">
-                        <div class="experienceBoxText">
-                            Verilog, Quartus, ARM
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/file-code.png" style="width:8vw; padding: 2.7vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    <a href="https://www.mathworks.com/products/matlab.html" target="_blank">
-                        <div class="experienceBoxText">
-                            ARM
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experienceBox">
-                        <img src="assets/java.png" style="width:11vw; padding: 2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.java.com/en/" target="_blank">
-                        <div class="experienceBoxText">
-                            Java
-                        </div>
-                    </a>
-                </th>
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <a href="#projects">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my Projects</div> 
-                                <img src="assets/tools.png" style="width:8vw; padding-top: 22.2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/arduino.png" style="width:15vw; padding: 1vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.arduino.cc/" target="_blank">
-                        <div class="experienceBoxText">
-                            Arduino
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/html.png" style="width:14vw; padding: 1.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.w3schools.com/html/default.asp" target="_blank">
-                        <div class="experienceBoxText">
-                            HTML 5
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/css.png" style="width:10vw; padding: 3vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    </a>
-                    <a href="https://www.w3schools.com/css/default.asp" target="_blank">
-                        <div class="experienceBoxText">
-                            CSS 3
-                        </div>
-                    </a>
-                </th>
-                
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <div class="experienceBox">
-                        <img src="assets/flutter.png" style="width:11vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://flutter.dev/" target="_blank">
-                        <div class="experienceBoxText">
-                            Flutter
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <div class="experienceBox">
-                        <img src="assets/dart.png" style="width:11vw; padding: 2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://dart.dev/" target="_blank">
-                        <div class="experienceBoxText">
-                            Dart
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experienceBox">
-                        <img src="assets/xd.png" style="width:15.5vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.adobe.com/ca/products/xd.html" target="_blank">
-                        <div class="experienceBoxText">
-                            Adobe XD
-                        </div>
-                    </a>
-                </th>
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <div class="experienceBox">
-                        <img src="assets/after-effects.png" style="width:12vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.adobe.com/ca/products/aftereffects.html" target="_blank">
-                        <div class="experienceBoxText">
-                            After Effects
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <div class="experienceBox">
-                        <img src="assets/photoshop.png" style="width:12vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.adobe.com/ca/products/photoshop.html" target="_blank">
-                        <div class="experienceBoxText">
-                            Photoshop
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experienceBox">
-                        <img src="assets/lightroom.png" style="width:12vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.adobe.com/ca/products/photoshop-lightroom.html" target="_blank">
-                        <div class="experienceBoxText">
-                            Lightroom
-                        </div>
-                    </a>
-                </th>
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay="0">
-                    <div class="experienceBox" >
-                        <img src="assets/autocad.png" style="width:11vw; padding: 3vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.autodesk.ca/en/products/autocad/overview" target="_blank">
-                        <div class="experienceBoxText">
-                            AutoCAD
-                        </div>
-                    </a>
-                </th>
-                <!--<th data-aos="zoom-in" data-aos-delay="100">
-                    <div class="experienceBox" >
-                        <img src="assets/blender.png" style="width:12.8vw; padding: 1.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.blender.org/" target="_blank">
-                        <div class="experienceBoxText">
-                            Blender
-                        </div>
-                    </a>
-                </th>-->
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <div class="experienceBox" >
-                        <img src="assets/multisim.png" style="width:11.8vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.multisim.com/" target="_blank">
-                        <div class="experienceBoxText">
-                            Multisim
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experienceBox">
-                        <img src="assets/linux.png" style="width:10.5vw; padding: 2.2vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://www.linux.org/" target="_blank">
-                        <div class="experienceBoxText">
-                            Linux OS
-                        </div>
-                    </a>
-                </th>
-            </tr>
-            <tr>
-                <th data-aos="zoom-in" data-aos-delay=00">
-                    <a href="https://github.com/jameskokoska?tab=repositories" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/matlab.png" style="width:12vw; padding: 3.3vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    <a href="https://www.mathworks.com/products/matlab.html" target="_blank">
-                        <div class="experienceBoxText">
-                            MATLAB
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="100">
-                    <a href="https://github.com/jameskokoska/KLWP-Background" target="_blank">
-                        <div class="experienceBox experienceBoxHoverEnable">
-                            <div class="experienceBoxHover"> 
-                                <div class="experienceBoxHoverTitle">View my GitHub</div> 
-                                <img src="assets/github.png" style="width:9vw; padding-top: 21.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                            </div>
-                            <img src="assets/klwp.png" style="width:12vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                        </div>
-                    <a href="https://help.kustom.rocks/" target="_blank">
-                        <div class="experienceBoxText">
-                            KLWP
-                        </div>
-                    </a>
-                </th>
-                <th data-aos="zoom-in" data-aos-delay="200">
-                    <div class="experienceBox">
-                        <img src="assets/microsoft-office.png" style="width:18vw; padding: 2.5vw; filter: drop-shadow(0px 0.3vw 0.6vw #00000083);">
-                    </div>
-                    <a href="https://products.office.com/en-ca/home" target="_blank">
-                        <div class="experienceBoxText">
-                            MS Office Suite
-                        </div>
-                    </a>
-                </th>
-            </tr>
-        </table> -->
+            
+            
+        </div>
     </div>
 
     <div class=projectsTopHide>

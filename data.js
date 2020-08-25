@@ -1,10 +1,173 @@
 var experience = [
     {
-        "software":"",
-        "softwareLink":"",
+        "software":"Python",
+        "image":"assets/python.png",
+        "softwareLink":"https://www.python.org/",
         "linkGithub":"true",
     },
-]
+    {
+        "software":"C",
+        "image":"assets/c-programming.png",
+        "softwareLink":"https://www.cprogramming.com/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"C++",
+        "image":"assets/c++programming.png",
+        "softwareLink":"https://www.cprogramming.com/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Verilog",
+        "image":"assets/quartus.png",
+        "softwareLink":"https://www.intel.com/content/www/us/en/products/programmable.html",
+        "linkGithub":"true",
+    },
+    {
+        "software":"ARM",
+        "image":"assets/file-code.png",
+        "softwareLink":"https://developer.arm.com/documentation/dui0473/m/writing-arm-assembly-language/the-read-modify-write-operation",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Java",
+        "image":"assets/java.png",
+        "softwareLink":"https://www.java.com/en/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Arduino",
+        "image":"assets/arduino.png",
+        "softwareLink":"https://www.arduino.cc/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"HTML 5",
+        "image":"assets/html.png",
+        "softwareLink":"https://www.w3schools.com/html/default.asp",
+        "linkGithub":"true",
+    },
+    {
+        "software":"CSS 3",
+        "image":"assets/css.png",
+        "softwareLink":"https://www.w3schools.com/css/default.asp",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Boostrap",
+        "image":"assets/boostrap.png",
+        "softwareLink":"https://getbootstrap.com/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"React",
+        "image":"assets/react.png",
+        "softwareLink":"https://reactjs.org/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Javascript",
+        "image":"assets/javascript.png",
+        "softwareLink":"https://www.javascript.com/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Flutter",
+        "image":"assets/flutter.png",
+        "softwareLink":"https://flutter.dev/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Dart",
+        "image":"assets/dart.png",
+        "softwareLink":"https://dart.dev/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Adobe XD",
+        "image":"assets/xd.png",
+        "softwareLink":"https://www.adobe.com/ca/products/xd.html",
+        "linkGithub":"false",
+    },
+    {
+        "software":"After Effects",
+        "image":"assets/after-effects.png",
+        "softwareLink":"https://www.adobe.com/ca/products/aftereffects.html",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Photoshop",
+        "image":"assets/photoshop.png",
+        "softwareLink":"https://www.adobe.com/ca/products/photoshop.html",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Lightroom",
+        "image":"assets/lightroom.png",
+        "softwareLink":"https://www.adobe.com/ca/products/photoshop-lightroom.html",
+        "linkGithub":"false",
+    },
+    {
+        "software":"AutoCAD",
+        "image":"assets/autocad.png",
+        "softwareLink":"https://www.autodesk.ca/en/products/autocad/overview",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Blender",
+        "image":"assets/blender.png",
+        "softwareLink":"https://www.blender.org/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Multisim",
+        "image":"assets/multisim.png",
+        "softwareLink":"https://www.multisim.com/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Linux OS",
+        "image":"assets/linux.png",
+        "softwareLink":"https://www.linux.org/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"MATLAB",
+        "image":"assets/matlab.png",
+        "softwareLink":"https://www.mathworks.com/products/matlab.html",
+        "linkGithub":"true",
+    },
+    {
+        "software":"KLWP",
+        "image":"assets/klwp.png",
+        "softwareLink":"https://help.kustom.rocks/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"MS Office Suite",
+        "image":"assets/microsoft-office.png",
+        "softwareLink":"https://products.office.com/en-ca/home",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Github",
+        "image":"assets/github.png",
+        "softwareLink":"https://github.com/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Visual Studio",
+        "image":"assets/visualstudio.png",
+        "softwareLink":"https://code.visualstudio.com/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Jet Brains",
+        "image":"assets/jetbrains.png",
+        "softwareLink":"https://www.jetbrains.com/",
+        "linkGithub":"false",
+    },
+];
 
 var timeline = [
     {
@@ -181,4 +344,4 @@ var timeline = [
         <li><p>Paper management, textbook organization, school supply inventory management</p></li>\
         ",
     },
-]
+];
