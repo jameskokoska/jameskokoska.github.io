@@ -156,7 +156,6 @@ a{
   margin-left: 5vw;
   float: right;
   filter: drop-shadow(0px 0.3vw 0.6vw #00000083);
-  overflow:hidden;
   border-radius: 100%;
   transition: filter 0.5s;
   user-select:none;
@@ -164,7 +163,7 @@ a{
 }
 
 .bioPic img{
-  animation: slowScale 10s forwards;
+  /* animation: slowScale 10s forwards; */
   animation-delay: 1s;
 }
 
