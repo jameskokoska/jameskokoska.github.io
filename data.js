@@ -54,8 +54,8 @@ var experience = [
         "linkGithub":"true",
     },
     {
-        "software":"Boostrap",
-        "image":"assets/boostrap.png",
+        "software":"Bootstrap",
+        "image":"assets/bootstrap.png",
         "softwareLink":"https://getbootstrap.com/",
         "linkGithub":"true",
     },
