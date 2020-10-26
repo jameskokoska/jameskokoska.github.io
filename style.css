@@ -457,7 +457,7 @@ input[type='checkbox']{
   background-image: linear-gradient(to left, #748bed,#75d8ef);
   background-attachment: fixed;
   position: relative;
-  box-shadow: 0 -0.3vw 0.6vw 0.1vw #00000066;
+  box-shadow: 0 0.1vw 0.5vw 0 #00000066;
   user-select:none;
   overflow:hidden;
 }
@@ -483,7 +483,7 @@ input[type='checkbox']{
   color: #000000;
   font-family: 'ProductSansBold';
   text-align: center;
-  box-shadow: 0 0.2vw 0.5vw 0 #00000066;
+  box-shadow: 0 0.1vw 0.5vw 0 #00000066;
   transition: color 0.5s;
 }
 
@@ -520,6 +520,31 @@ input[type='checkbox']{
   width:80px; 
   padding-top: 307px; 
   filter: drop-shadow(0px 0.3vw 0.6vw #00000083);
+}
+
+
+.githubBox{
+  border-radius: 10px;
+  width: 80vw;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: -20px;
+  box-shadow: 0 0.1vw 0.5vw 0 #00000066;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.githubBox:hover{
+  transition: 0.3s;
+  box-shadow: 0 0.1vw 0.5vw 0 #1904da2c;
+  transform: scale(0.99);
+}
+@media only screen and (min-width: 1280px) {
+  .githubBox{
+    width: 1080px;
+  }
 }
 
 .projectsSection{
@@ -998,6 +1023,17 @@ input[type='checkbox']{
   .endSubBottom{
     font-size: 8px;
     padding-top: 5px;
+  }
+
+  .githubBox{
+    border-radius: 10px;
+    width: 95vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0.1vw 0.5vw 0 #00000066;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

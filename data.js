@@ -63,7 +63,7 @@ var experience = [
         "software":"React",
         "image":"assets/react.png",
         "softwareLink":"https://reactjs.org/",
-        "linkGithub":"false",
+        "linkGithub":"true",
     },
     {
         "software":"Javascript",
@@ -171,6 +171,14 @@ var experience = [
 
 var timeline = [
     {
+        "title":"Teaching Assistant, Orientation to Engineering UofT",
+        "date":"Aug.-Dec. 2020",
+        "description":"\
+        <li><p>Planned lessons and facilitated tutorials to mentor students with the technical, ethical, and personal health management skills required for an Engineering career </li></p>\
+        <li><p>Provided constructive input to team meetings with the lead Professor and coordinator</li></p>\
+        ",
+    },
+    {
         "title":"Academic Mentor, UofT Engineering Academy",
         "date":"Summer 2020",
         "description":"\
@@ -230,24 +238,24 @@ var timeline = [
         <li><p>Charted future activities and goals at the University of Toronto to develop key skills </p></li>\
         ",
     },
-    {
-        "title":"Spark Design Team",
-        "date":"Oct. 2018",
-        "description":"\
-        <li><p>Constructed a 3D snake game consisting of a matrix of LEDs by soldering and woodworking</p></li>\
-        <li><p>Collaborated with other team members to test and troubleshoot electrical issues</p></li>\
-        ",
-    },
-    {
-        "title":"Cook, Centreville Amusement Park",
-        "date":"Summer 2018",
-        "description":"\
-        <li><p>Worked as part of a team to prepare and serve food efficiently to customers</p></li>\
-        <li><p>Responsible for cash management and ensuring correct balance at the end of the day</p></li>\
-        <li><p>Acquired organizational and time management skills</p></li>\
-        <li><p>Communicated inventory status to maintain smooth operation</p></li>\
-        ",
-    },
+    // {
+    //     "title":"Spark Design Team",
+    //     "date":"Oct. 2018",
+    //     "description":"\
+    //     <li><p>Constructed a 3D snake game consisting of a matrix of LEDs by soldering and woodworking</p></li>\
+    //     <li><p>Collaborated with other team members to test and troubleshoot electrical issues</p></li>\
+    //     ",
+    // },
+    // {
+    //     "title":"Cook, Centreville Amusement Park",
+    //     "date":"Summer 2018",
+    //     "description":"\
+    //     <li><p>Worked as part of a team to prepare and serve food efficiently to customers</p></li>\
+    //     <li><p>Responsible for cash management and ensuring correct balance at the end of the day</p></li>\
+    //     <li><p>Acquired organizational and time management skills</p></li>\
+    //     <li><p>Communicated inventory status to maintain smooth operation</p></li>\
+    //     ",
+    // },
     {
         "title":"Executive, White Pine Leadership Camp",
         "date":"Feb.-Sept. 2017",
@@ -278,7 +286,7 @@ var timeline = [
         ",
     },
     {
-        "title":"Leader, Leaders of Tomorrow",
+        "title":"Leaders of Tomorrow",
         "date":"Sept. 2014-June 2018",
         "description":"\
         <li><p>Attended leadership workshops and seminars to develop skills such as communication, decision making, problem solving, and time management</p></li>\
@@ -286,62 +294,62 @@ var timeline = [
         <li><p>Attained the required 100 hours of community involvement and volunteer to achieve the Leadership Certificate at graduation</p></li>\
         ",
     },
+    // {
+    //     "title":"Volunteer, Etobicoke Collegiate Annual Parent Fundraising Event",
+    //     "date":"Nov. 2017",
+    //     "description":"\
+    //     <li><p>Helped raise money for school's music, art, athletic and leadership programs</p></li>\
+    //     <li><p>Provided audio visual support for the band and video displays</p></li>\
+    //     ",
+    // },
     {
-        "title":"Volunteer, Etobicoke Collegiate Annual Parent Fundraising Event",
-        "date":"Nov. 2017",
-        "description":"\
-        <li><p>Helped raise money for school's music, art, athletic and leadership programs</p></li>\
-        <li><p>Provided audio visual support for the band and video displays</p></li>\
-        ",
-    },
-    {
-        "title":"Member, Etobicoke Tennis Association Intramurals",
+        "title":"Etobicoke Tennis Association Intramurals",
         "date":"Oct. 2017-June 2018",
         "description":"\
         <li><p>Practiced tennis skills with local doubles and singles matches</p></li>\
         <li><p>Participated in monthly tournaments and weekly practices</p></li>\
         ",
     },
-    {
-        "title":"Member, Mathletes",
-        "date":"Nov. 2016-Feb 2017",
-        "description":"\
-        <li><p>Practiced weekly challenging mathematical concepts and problems to prepare for various mathematics and computing competitions</p></li>\
-        <li><p>Improved my mathematics and problem solving abilities by collaborating with others during practice sessions</p></li>\
-        ",
-    },
-    {
-        "title":"Member, Audio Visual Club",
-        "date":"Sept. 2016-June 2017",
-        "description":"\
-        <li><p>Helped set up and run audio and visual support for school events</p></li>\
-        <li><p>Attended weekly meetings to discuss technical issues and upcoming events</p></li>\
-        <li><p>Worked closely with other AV members as a team and increased my technical knowledge by learning required technology to run a variety of stage events such as assemblies, drama plays, and music concerts</p></li>\
-        ",
-    },
-    {
-        "title":"Volunteer Facilitator, TREC Education",
-        "date":"May 2016, May 2017",
-        "description":"\
-        <li><p>Volunteered as an outreach presentor to promote renewable and clean energy</p></li>\
-        <li><p>Promoted science, technology and engineering to young children at Kids World of Energy Festival by conducting renewable energy workshops</p></li>\
-        <li><p>Conducted interactive workshops by teaching engineering concepts with conductors, insulators, windmills, and solar power</p></li>\
-        ",
-    },
-    {
-        "title":"Volunteer Representative, SolarShare",
-        "date":"Aug., Sept. 2015",
-        "description":"\
-        <li><p>Spoke to the public regarding SolarShare projects and the benefits of investing in renewable energy solar bonds</p></li>\
-        <li><p>Lead children activities, such as face painting</p></li>\
-        ",
-    },
-    {
-        "title":"Volunteer, Norseman Junior Middle School",
-        "date":"Sept. 2015",
-        "description":"\
-        <li><p>Helped elementary school teachers prepare for the upcoming school year</p></li>\
-        <li><p>Paper management, textbook organization, school supply inventory management</p></li>\
-        ",
-    },
+    // {
+    //     "title":"Member, Mathletes",
+    //     "date":"Nov. 2016-Feb 2017",
+    //     "description":"\
+    //     <li><p>Practiced weekly challenging mathematical concepts and problems to prepare for various mathematics and computing competitions</p></li>\
+    //     <li><p>Improved my mathematics and problem solving abilities by collaborating with others during practice sessions</p></li>\
+    //     ",
+    // },
+    // {
+    //     "title":"Member, Audio Visual Club",
+    //     "date":"Sept. 2016-June 2017",
+    //     "description":"\
+    //     <li><p>Helped set up and run audio and visual support for school events</p></li>\
+    //     <li><p>Attended weekly meetings to discuss technical issues and upcoming events</p></li>\
+    //     <li><p>Worked closely with other AV members as a team and increased my technical knowledge by learning required technology to run a variety of stage events such as assemblies, drama plays, and music concerts</p></li>\
+    //     ",
+    // },
+    // {
+    //     "title":"Volunteer Facilitator, TREC Education",
+    //     "date":"May 2016, May 2017",
+    //     "description":"\
+    //     <li><p>Volunteered as an outreach presentor to promote renewable and clean energy</p></li>\
+    //     <li><p>Promoted science, technology and engineering to young children at Kids World of Energy Festival by conducting renewable energy workshops</p></li>\
+    //     <li><p>Conducted interactive workshops by teaching engineering concepts with conductors, insulators, windmills, and solar power</p></li>\
+    //     ",
+    // },
+    // {
+    //     "title":"Volunteer Representative, SolarShare",
+    //     "date":"Aug., Sept. 2015",
+    //     "description":"\
+    //     <li><p>Spoke to the public regarding SolarShare projects and the benefits of investing in renewable energy solar bonds</p></li>\
+    //     <li><p>Lead children activities, such as face painting</p></li>\
+    //     ",
+    // },
+    // {
+    //     "title":"Volunteer, Norseman Junior Middle School",
+    //     "date":"Sept. 2015",
+    //     "description":"\
+    //     <li><p>Helped elementary school teachers prepare for the upcoming school year</p></li>\
+    //     <li><p>Paper management, textbook organization, school supply inventory management</p></li>\
+    //     ",
+    // },
 ];
