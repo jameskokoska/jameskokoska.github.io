@@ -60,15 +60,27 @@ var experience = [
         "linkGithub":"true",
     },
     {
-        "software":"React",
+        "software":"Javascript",
+        "image":"assets/javascript.png",
+        "softwareLink":"https://www.javascript.com/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"React JS",
         "image":"assets/react.png",
         "softwareLink":"https://reactjs.org/",
         "linkGithub":"true",
     },
     {
-        "software":"Javascript",
-        "image":"assets/javascript.png",
-        "softwareLink":"https://www.javascript.com/",
+        "software":"React Native",
+        "image":"assets/react.png",
+        "softwareLink":"https://reactnative.dev/",
+        "linkGithub":"true",
+    },
+    {
+        "software":"Expo SDK",
+        "image":"assets/expo.png",
+        "softwareLink":"https://expo.io/",
         "linkGithub":"true",
     },
     {
@@ -123,6 +135,12 @@ var experience = [
         "software":"Multisim",
         "image":"assets/multisim.png",
         "softwareLink":"https://www.multisim.com/",
+        "linkGithub":"false",
+    },
+    {
+        "software":"Wireshark",
+        "image":"assets/wireshark.png",
+        "softwareLink":"https://www.wireshark.org/",
         "linkGithub":"false",
     },
     {
