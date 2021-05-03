@@ -36,6 +36,12 @@ var experience = [
         "linkGithub":"false",
     },
     {
+        "software":"SQL",
+        "image":"assets/sql.png",
+        "softwareLink":"https://www.w3schools.com/sql/",
+        "linkGithub":"false",
+    },
+    {
         "software":"Arduino",
         "image":"assets/arduino.png",
         "softwareLink":"https://www.arduino.cc/",
