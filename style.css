@@ -418,9 +418,6 @@ input[type='checkbox']{
   padding-top: 100px;
 }
 
-.experienceSectionContent{
-}
-
 .experienceTitle{
   font-size: 5vw;
   padding-left: 5vw;
@@ -553,9 +550,9 @@ input[type='checkbox']{
 }
 
 .projectsSectionContent{
-  padding-bottom: 100px;
   padding-top: 4vw;
   background-color: #79d0fc;
+  padding-bottom: 300px;
 }
 
 .projectsTitle{
