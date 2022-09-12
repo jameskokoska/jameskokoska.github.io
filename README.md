@@ -1,3 +1,3 @@
-# My Website!
-[Moved here](http://individual.utoronto.ca/jameskokoska/)
-* This website is just used as a redirect page
+# Website
+* My personal website source code
+* It is hosted here: [http://individual.utoronto.ca/jameskokoska](http://individual.utoronto.ca/jameskokoska)

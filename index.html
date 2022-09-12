@@ -1,29 +1,395 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 <html>
     <head>
-		<title>Redirecting...</title>
-        <link rel="stylesheet" href="style.css">    
-        <meta http-equiv="refresh" content="4,url=http://individual.utoronto.ca/jameskokoska/">
+        <meta name="viewport" content="width=375, initial-scale=1.0">
+        <title>James Kokoska</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <body>
-            <div class="message messageMain">Redirecting...</div>
-            <div class="message messageMainLink">Didn't get redirected?</div>
-            <a href="http://individual.utoronto.ca/jameskokoska/">
-                <div class="messageLink">
-                    http://individual.utoronto.ca/jameskokoska/
+    <body id=bodyContainer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>AOS.init();</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+        <div class="blobsArea">
+            <ul class="blobs">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto topPageLinksContainer">
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#timeline">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#software">Software</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link topPageLinks" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link topPageLinks" href="#education">Education</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="topSocialContainer">
+                <a href="https://www.linkedin.com/in/james-kokoska-80902019b/" target="_blank"><div class="topSocial"><img src="assets/linkedin-brands.png"></div></a>
+                <a href="https://www.github.com/jameskokoska" target="_blank"><div class="topSocial"><img src="assets/github-brands.png"></div></a>
+                <a href="#email"><div class="topSocial"><img src="assets/envelope-square-solid.png"></div></a>
+            </div>
+        </nav>
+
+        <div class="introSection">
+            <div class="bioPic">
+                <img src="assets/me.png" style="width:100%;">
+            </div>
+            <h2 class="revealIn">
+                Hello!
+            </h2>
+            <h1 class="revealIn d1">
+                I'm James
+            </h1>
+            <div class="bioDescription revealIn d2">
+                I'm a third year Computer Engineering student at the University of Toronto, currently on my Professional Experience Year.
+            </div>
+            <a href="#timeline">
+                <div class="button scaleIn d3" style="margin-left: 8.6vw;">
+                    View my Timeline
                 </div>
             </a>
 
+            <div class=scrollArrow></div>
+        </div>
+
+        <div class="timelineSection" id="timeline">
+            <div class="waveOffset">
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+                <div class="wave waveTop waveTimeline"></div>
+            </div>
+            <div class="timelineSectionContent">
+                <h1 class="timelineTitle" data-aos="fade-right">
+                    Timeline 
+                </h1>
+                <div class="timelineContentLine">
+                    <script src="data.js"></script>
+                    <div id="timelineBoxes"></div>
+                    <script>
+                        readData(timeline);
+                        
+                        function readData(arr) {
+                            var out = "";
+                            var i;
+                            for(i = 0; i < arr.length; i++) {
+                                out+='<div class="timelineDot" data-aos="zoom-in">';
+                                    out+='<div data-aos="fade-up" data-aos-delay="50">';
+                                        out+='<input id="timelineCollapsable'+ i + '" class="toggle" type="checkbox">';
+                                        out+='<label for="timelineCollapsable'+ i + '" class="timelineContentTitleCollapse"><p>'+arr[i].date+'</p>'+arr[i].title+'</label>';
+                                        out+='<div class="timelineCollapsableContent">';
+                                        out+='<ul>';
+                                            out+=arr[i].description;
+                                        out+='</ul>';
+                                    out+='</div>';
+                                out+='</div>';
+                            }
+                            document.getElementById("timelineBoxes").innerHTML = out;
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="waveOffset">
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+                <div class="wave waveBottom waveTimeline"></div>
+            </div>
+        </div>
             
+
+    <div class="experienceSection" id="software">
+        <div class="experienceSectionContent">
+            <h1 class="experienceTitle" data-aos="fade-right">
+                Software and Tools
+            </h1>
+        </div>
+
+        <script src="data.js"></script>
+        <div class="experienceContainerLarge" id="experienceBoxes"></div>
+        <script>
+            readData(experience);
             
-            <div class="loadBackground loadBackground1 centerMiddle"> </div>
-            <div class="loadBackground loadBackground2 centerMiddle"> </div>
-            <div class="loadBackground loadBackground3 centerMiddle"> </div>
-            <div class="loadDot loadDot1"></div>
-            <div class="loadDot loadDot2"></div>
-            <div class="loadDot loadDot3"></div>
-            <div class="loadDot loadDot4"></div>
-            <div class="loadDot loadDot5"></div>
-            <div class="loadBackground loadBackground4 centerMiddle"> </div>
-    </body>
-</html>
+            function readData(arr) {
+                var out = "";
+                var i;
+                for(i = 0; i < arr.length; i++) {
+                    if(arr[i].linkGithub==='true'){
+                        out+='<div>'
+                            out+='<div data-aos="zoom-in" data-aos-delay="0" class="experienceBoxContainer">';
+                                out+='<a href="https://github.com/jameskokoska?tab=repositories" target="_blank">';
+                                    out+='<div class="experienceBox experienceBoxHoverEnable" >';
+                                        out+='<div class="experienceBoxHover">';
+                                            out+='<div class="experienceBoxHoverTitle">View my GitHub</div>';
+                                            out+='<img src="assets/github.png" class="githubHover">';
+                                        out+='</div>';
+                                        out+='<img src="'+ arr[i].image +'" style="width:100%; padding: 20%;filter: drop-shadow(0px 0.3vw 0.6vw #00000083);" alt="Experience icon">';
+                                    out+='</div>';
+                                out+='</a>';
+                                out+='<a href="'+arr[i].softwareLink+'" target="_blank">';
+                                    out+='<div class="experienceBoxText">';
+                                        out+=arr[i].software;
+                                    out+='</div>';
+                                out+='</a>';
+                            out+='</div>'
+                        out+='</div>'
+                    } else {
+                        out+='<div>'
+                            out+='<div data-aos="zoom-in" data-aos-delay="0" class="experienceBoxContainer">';
+                                out+='<div class="experienceBox" >';
+                                    out+='<img src="'+ arr[i].image +'" style="width:100%; padding: 20%;filter: drop-shadow(0px 0.3vw 0.6vw #00000083);" alt="Experience icon">';
+                                out+='</div>';
+                                out+='<a href="'+arr[i].softwareLink+'" target="_blank">';
+                                    out+='<div class="experienceBoxText">';
+                                        out+=arr[i].software;
+                                    out+='</div>';
+                                out+='</a>';
+                            out+='</div>'
+                        out+='</div>'
+                    }
+                }
+                document.getElementById("experienceBoxes").innerHTML = out;
+            }
+        </script>
+    </div>
+    
+
+    <div class="projectsSection" id="projects">
+        <div class="waveOffset">
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+            <div class="wave waveTop waveProjects"></div>
+        </div>
+        <div class="projectsSectionContent">
+            <div class="projectsTitle" data-aos="fade-right">
+                Projects
+            </div>
+            <div class="projectsBox" data-aos="fade-up">
+                <div class="projectsDescriptionsSide">
+                    <h1>Verilog Piano Tiles</h1>
+                        <p>A Piano Tiles game written entirely in the hardware based language, Verilog.</p> 
+                        <p>Made for the DE1-SoC FPGA board.</p>
+                    <h2>Features</h2>
+                    <ul>
+                        <li>2 gamemodes</li>
+                        <li>Pseudo random tiles</li>
+                        <li>Final scores</li>
+                        <li>PS2 Keyboard support</li>
+                    </ul>
+                    <a href="https://github.com/jameskokoska/PianoTiles-Verilog" target="_blank">
+                        <div class="button">
+                            View on Github
+                        </div>
+                    </a>
+                </div>
+                <div class="projectsSlideshow">
+                    <div id="carouselIndicators" data-interval="6000" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Title-Screen.jpg" alt="Title Screen">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Title Screen</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Random-Queue-Start.jpg" alt="Random Tile Queue on Start">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Random Tile Queue on Start</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Progress-Bar-and-Incorrect-Tile.jpg" alt="Incorrect Tile, Progress Bar on Side">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Incorrect Tile, Progress Bar on Side</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/Piano-Final-Score-Screen.jpg" alt="Final Score">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Final Score</h5>
+                            </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projectsBox" data-aos="fade-up">
+                <div class="projectsDescriptionsSide">
+                    <h1>TTC Map</h1>
+                    <p>A side project aiming to recreate the Toronto Transit Commission's Subway Map.</p>
+                    <p>Created with w2812b LEDs and programmed with Arduino using the FastLED library.</p>
+                    <a href="https://github.com/jameskokoska/ttc-map" target="_blank">
+                        <div class="button">
+                            View on Github
+                        </div>
+                    </a>
+                </div>
+               
+                <div class="projectsSlideshow">
+                    <div id="carouselIndicators2" data-interval="5800" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/slideshow/TTC3.jpg" alt="The Finished Map">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>The Finished Map</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/TTC0.jpg" alt="Layout Planning">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Layout Planning</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/slideshow/TTC2.jpg" alt="Aligned LEDs">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Aligned LEDs</h5>
+                            </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="http://github.com/jameskokoska" target="_blank" class="githubBoxParent">
+                <div data-aos="fade-up">
+                    <img src="assets/githubBanner.png" class="githubBox">
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="educationSection" id="education">
+        <div class="waveOffset" style="margin-top:-280px; z-index:100;">
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+            <div class="wave waveTop waveEducation"></div>
+        </div>
+        <div class="educationSectionContent">
+            <div class="educationTitle" data-aos="fade-right">
+                Education
+            </div>
+        
+            <div class="educationBox" data-aos="fade-up">
+                <h1><span class="educationBoxDate">2018-Present</span>University of Toronto</h1>
+                <h2>Computer Engineering - Bachelor of Applied Science </h2>
+                <ul>
+                    <li>Engineering Society Award, 2019</li>
+                    <li>Andrew Alexander Kinghorn Scholarship, 2019</li>
+                    <li>Edward S Rogers Sr. Admission Scholarship, 2018</li>
+                </ul>
+            </div>
+            <div class="educationBox" data-aos="fade-up">
+                <h1>Engineering Strategies and Practices</h1>
+                <h2><span class="educationBoxDate">2019</span>Team Leader</h2>
+                <h3>Project: Preventing Intentional Vehicle Collisions in Toronto</h3>
+                <ul>
+                    <li>Managed and executed team meetings to produce design documents and specifications</li>
+                    <li>Created and enforced deadlines of tasks to maintain schedule</li>
+                </ul>
+                <h2 style="margin-top:1vw;"><span class="educationBoxDate">2018</span>Communications Manager</h2>
+                <h3>Project: Tanvas Technology for the Visually Impaired</h3>
+                <ul>
+                    <li>Communicated with course instructors on behalf of my design team</li>
+                    <li>Responsible for submission and consultation regarding project documents</li>
+                </ul>
+            </div>
+            <div class="educationBox" data-aos="fade-up">
+                <h1><span class="educationBoxDate">2014-2018</span>Etobicoke Collegiate Institute</h1>
+                <ul>
+                    <li>Ontario Secondary School Diploma, 2018</li>
+                    <li>French Language Certificate, 2018</li>
+                    <li>University of Waterloo Computing Competition Certificate of Distinction, 2017</li>
+                    <li>University of Waterloo Fermat Math Contest Certificate of Distinction, 2017</li>
+                    <li>Honour Roll, 2015-2018</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="endSubHead" id="email">
+            CONTACT ME
+        </div>
+        <div class="endHead">
+            james.kokoska@mail.utoronto.ca
+        </div>
+        <div class="endSubBottom">
+            Icons credit: <a href="https://fontawesome.com/license"><u>Font Awesome</u></a><br>
+            Brand icons are trademarks of their respective owners and do not represent any endorsement.
+        </div>
+    </div>
+
+
+    
+        
+
+</body></html>
