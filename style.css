@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "ProductSansBold";
-  src: url("assets/fonts/Product Sans Bold.ttf")  format("truetype");
+  font-family: "SofiaProBold";
+  src: url("assets/fonts/Sofia Pro Bold.ttf")  format("truetype");
   font-weight: bold;
 }
 @font-face {
-  font-family: "ProductSansRegular";
-  src: url("assets/fonts/Product Sans Regular.ttf")  format("truetype");
+  font-family: "SofiaProRegular";
+  src: url("assets/fonts/Sofia Pro Regular.ttf")  format("truetype");
 }
 
 html, body {
@@ -41,7 +41,7 @@ a:link{
 }
 
 p {
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   font-size: 20px;
 }
 
@@ -84,7 +84,7 @@ a{
   width: 100vw;
   filter: drop-shadow(0px 0.2vw 0.4vw #00000031);
   backdrop-filter: blur(12px);
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 18px;
 }
 
@@ -136,14 +136,14 @@ a{
 }
 
 .introSection h1{
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   margin: 0 auto;
   padding-left: 8.6vw;
   font-size: 8vw;
 }
 
 .introSection h2{
-    font-family: 'ProductSansBold';
+    font-family: 'SofiaProBold';
     margin: 0 auto;
     padding-left: 8.6vw;
     font-size: 6vw;
@@ -172,7 +172,7 @@ a{
   padding-left: 9.2vw;
   padding-top: 2vw;
   padding-bottom: 3vw;
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   color: #747474;
   white-space: normal;
   word-wrap: normal;
@@ -186,7 +186,7 @@ a{
   padding-bottom: 1vw;
   padding-left: 2vw;
   padding-right: 2vw;
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   background-color: #3651ef;
   background-image: linear-gradient(to right, #36D1DC,#5B86E5, #6015a5, #6015a5);
   background-size:225%;
@@ -265,7 +265,7 @@ a{
   font-size: 5vw;
   padding-left: 5vw;
   padding-bottom: 3vw;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: white;
   position: relative;
   z-index: 1;
@@ -288,7 +288,7 @@ input[type='checkbox']{
   background:white;
   transition: all 0.5s;
   position: relative;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: black;
   transition: color 0.3s;
   transition: border-bottom-left-radius 0.5s, border-bottom-right-radius 0.5s, color 0.5s;
@@ -421,7 +421,7 @@ input[type='checkbox']{
 .experienceTitle{
   font-size: 5vw;
   padding-left: 5vw;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: black;
   position: relative;
   z-index: 1;
@@ -478,7 +478,7 @@ input[type='checkbox']{
   margin-bottom: 10px;
   background: #ffffff;
   color: #000000;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   text-align: center;
   box-shadow: 0 0.1vw 0.5vw 0 #00000066;
   transition: color 0.5s;
@@ -503,7 +503,7 @@ input[type='checkbox']{
 }
 .experienceBoxHoverTitle{
   font-size: 18px;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: #000000;
   padding-top: 15px;
 }
@@ -558,7 +558,7 @@ input[type='checkbox']{
 .projectsTitle{
   font-size: 5vw;
   padding-left: 5vw;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: #013567;
   position: relative;
   z-index: 1;
@@ -591,7 +591,7 @@ input[type='checkbox']{
 .projectsSection h1{
   font-weight: normal;
   font-style:normal;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 34px;
   color: black;
 }
@@ -599,19 +599,19 @@ input[type='checkbox']{
 .projectsSection h2{
   margin-top:1vw;
   margin-bottom:-0.1vw;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 24px;
   font-weight: normal;
   font-style:normal;
 }
 
 .projectsSection p{
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   font-size: 20px;
 }
 
 .projectsSection li{
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   font-size: 19px;
 }
 
@@ -642,7 +642,7 @@ input[type='checkbox']{
 .educationTitle{
   font-size: 5vw;
   padding-left: 5vw;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   color: #ffffff;
   position: relative;
   z-index: 1;
@@ -666,7 +666,7 @@ input[type='checkbox']{
 .educationBoxDate{
   text-align: right;
   float: right;
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   padding: 16px;
   font-size: 18px;
   color: #535353;
@@ -675,14 +675,14 @@ input[type='checkbox']{
 .educationBox h1{
   font-weight: normal;
   font-style:normal;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 34px;
   color: black;
 }
 
 .educationBox h2{
   margin-top:-5px;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 23px;
   font-weight: normal;
   font-style:normal;
@@ -690,7 +690,7 @@ input[type='checkbox']{
 
 .educationBox h3{
   margin-top:-5px;
-  font-family: 'ProductSansBold';
+  font-family: 'SofiaProBold';
   font-size: 20px;
   font-weight: normal;
   font-style:normal;
@@ -702,7 +702,7 @@ input[type='checkbox']{
 }
 
 .educationBox li{
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   font-size: 18px;
 }
 
@@ -711,7 +711,7 @@ input[type='checkbox']{
   background: #292B37;
   padding-top: 30px;
   box-shadow: 0 0.2vw 1.2vw 0 #0000006c;
-  font-family: 'ProductSansRegular';
+  font-family: 'SofiaProRegular';
   color:white;
 }
 
@@ -958,7 +958,7 @@ input[type='checkbox']{
   .educationBoxDate{
     text-align: right;
     float: right;
-    font-family: 'ProductSansRegular';
+    font-family: 'SofiaProRegular';
     padding: 0px;
     font-size: 13px;
     color: #535353;
@@ -967,14 +967,14 @@ input[type='checkbox']{
   .educationBox h1{
     font-weight: normal;
     font-style:normal;
-    font-family: 'ProductSansBold';
+    font-family: 'SofiaProBold';
     font-size: 24px;
     color: black;
   }
 
   .educationBox h2{
     margin-top:-5px;
-    font-family: 'ProductSansBold';
+    font-family: 'SofiaProBold';
     font-size: 18px;
     font-weight: normal;
     font-style:normal;
@@ -982,7 +982,7 @@ input[type='checkbox']{
 
   .educationBox h3{
     margin-top:-5px;
-    font-family: 'ProductSansBold';
+    font-family: 'SofiaProBold';
     font-size: 16px;
     font-weight: normal;
     font-style:normal;
@@ -994,7 +994,7 @@ input[type='checkbox']{
   }
 
   .educationBox li{
-    font-family: 'ProductSansRegular';
+    font-family: 'SofiaProRegular';
     font-size: 15px;
   }
 
