@@ -132,6 +132,18 @@ var experience = [
         "linkGithub":true,
     },
     {
+      "software":"Sentry",
+      "image":"assets/sentry.png",
+      "softwareLink":"https://sentry.io/",
+      "linkGithub":true,
+    },
+    {
+      "software":"Figma",
+      "image":"assets/figma.png",
+      "softwareLink":"https://figma.com/",
+      "linkGithub":false,
+    },
+    {
         "software":"Adobe XD",
         "image":"assets/xd.png",
         "softwareLink":"https://www.adobe.com/ca/products/xd.html",
@@ -246,8 +258,6 @@ var timeline = [
         <li><p>Performed diagnostics test execution on post-silicon platforms for validation of security hardware IP features while analyzing and debugging test case failures in C++ </p></li>\
         <li><p>Updated diagnostics security interfaces and test libraries to support hardware cryptographic encryption and decryption algorithms to assist and enable new programs</p></li>\
         <li><p>Developed web and mobile application in Flutter to visualize diagnostics test case status tracking and projection supporting over 30 internal GPU and APU projects</p></li>\
-        <li><p></p></li>\
-        <li><p></p></li>\
         ",
     },
     {
